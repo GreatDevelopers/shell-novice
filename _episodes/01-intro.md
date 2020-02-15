@@ -5,59 +5,80 @@ exercises: 0
 questions:
 - "What is a command shell and why would I use one?"
 objectives:
-- "Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs."
-- "Explain when and why command-line interfaces should be used instead of graphical interfaces."
+- "Explain how the shell relates to the keyboard, the screen, the operating
+  system, and users' programs."
+- "Explain when and why command-line interfaces should be used instead of
+  graphical interfaces."
 keypoints:
 - "Explain the steps in the shell's read-run-print cycle."
 - "Most commands take options (flags) which begin with a `-`."
-- "Identify the actual command, options, and filenames in a command-line call."
+- "Identify the actual command, options, and filenames in a command-line
+  call."
 - "Explain the steps in the shell's read-run-print cycle."
 - "Demonstrate the use of tab completion and explain its advantages."
+
 keypoints:
-- "A shell is a program whose primary purpose is to read commands and run other programs."
-- "The shell's main advantages are its high action-to-keystroke ratio, its support for
-automating repetitive tasks, and its capacity to access networked machines."
+- "A shell is a program whose primary purpose is to read commands and run
+  other programs."
+- "The shell's main advantages are its high action-to-keystroke ratio, its
+support for automating repetitive tasks, and its capacity to access
+networked machines."
 - "The shell's main disadvantages are its primarily textual nature and how
 cryptic its commands and operation can be."
 ---
 ### Background
 
-Humans and computers commonly interact in many different ways, such as through a keyboard and mouse, touch screen interfaces, or using speech recognition systems. The most widely used way to interact with personal computers is called a **graphical user interface** (GUI).
-With a GUI, we give instructions by clicking a mouse and using menu-driven interactions.
+Humans and computers commonly interact in many different ways, such as
+through a keyboard and mouse, touch screen interfaces, or using speech
+recognition systems.  The most widely used way to interact with personal
+computers is called a **graphical user interface** (GUI).  With a GUI, we
+give instructions by clicking a mouse and using menu-driven interactions.
 
-While the visual aid of a GUI makes it intuitive to learn, this way of delivering instructions to a computer scales very poorly.
-Imagine the following task:
-for a literature search, you have to copy the third line of one thousand text files in one thousand different directories and paste it into a single file.
-Using a GUI, you would not only be clicking at your desk for several hours, but you could potentially also commit an error in the process of completing this repetitive task. This is where we take advantage of the Unix shell.
-The Unix shell is both a **command-line interface** (CLI) and a scripting language, allowing such repetitive tasks to be done automatically and fast.
-With the proper commands, the shell can repeat tasks with or without some modification as many times as we want.
-Using the shell, the task in the literature example can be accomplished in seconds.
+While the visual aid of a GUI makes it intuitive to learn, this way of
+delivering instructions to a computer scales very poorly.  Imagine the
+following task: for a literature search, you have to copy the third line of
+one thousand text files in one thousand different directories and paste it
+into a single file.  Using a GUI, you would not only be clicking at your
+desk for several hours, but you could potentially also commit an error in
+the process of completing this repetitive task.  This is where we take
+advantage of the Unix shell.  The Unix shell is both a **command-line
+interface** (CLI) and a scripting language, allowing such repetitive tasks
+to be done automatically and fast.  With the proper commands, the shell can
+repeat tasks with or without some modification as many times as we want. 
+Using the shell, the task in the literature example can be accomplished in
+seconds.
 
 
 ### The Shell
 
+The shell is a program where users can type commands.  With the shell, it's
+possible to invoke complicated programs like climate modeling software or
+simple commands that create an empty directory with only one line of code. 
+The most popular Unix shell is Bash (the Bourne Again SHell --- so-called
+because it's derived from a shell written by Stephen Bourne).  Bash is the
+default shell on most modern implementations of Unix and in most packages
+that provide Unix-like tools for Windows.
 
-The shell is a program where users can type commands.
-With the shell, it's possible to invoke complicated programs like climate modeling software or simple commands that create an empty directory with only one line of code.
-The most popular Unix shell is Bash (the Bourne Again SHell --- so-called because it's derived from a shell written by Stephen Bourne).
-Bash is the default shell on most modern implementations of Unix and in most packages that provide Unix-like tools for Windows.
-
-Using the shell will take some effort and some time to learn.
-While a GUI presents you with choices to select, CLI choices are not automatically presented to you, so you must learn a few commands like new vocabulary in a language you're studying.
-However, unlike a spoken language, a small number of "words" (i.e. commands) gets you a long way, and we'll cover those essential few today.
+Using the shell will take some effort and some time to learn.  While a GUI
+presents you with choices to select, CLI choices are not automatically
+presented to you, so you must learn a few commands like new vocabulary in a
+language you're studying.  However, unlike a spoken language, a small number
+of "words" (i.e.  commands) gets you a long way, and we'll cover those
+essential few today.
 
 The grammar of a shell allows you to combine existing tools into powerful
-pipelines and handle large volumes of data automatically. Sequences of
+pipelines and handle large volumes of data automatically.  Sequences of
 commands can be written into a *script*, improving the reproducibility of
 workflows.
 
-In addition, the command line is often the easiest way to interact with remote machines and supercomputers.
-Familiarity with the shell is near essential to run a variety of specialized tools and resources
-including high-performance computing systems.
-As clusters and cloud computing systems become more popular for scientific data crunching,
-being able to interact with the shell is becoming a necessary skill.
-We can build on the command-line skills covered here
-to tackle a wide range of scientific questions and computational challenges.
+In addition, the command line is often the easiest way to interact with
+remote machines and supercomputers.  Familiarity with the shell is near
+essential to run a variety of specialized tools and resources including
+high-performance computing systems.  As clusters and cloud computing systems
+become more popular for scientific data crunching, being able to interact
+with the shell is becoming a necessary skill.  We can build on the
+command-line skills covered here to tackle a wide range of scientific
+questions and computational challenges.
 
 Let's get started.
 
@@ -69,13 +90,13 @@ $
 ~~~
 {: .language-bash}
 
-The shell typically uses `$ ` as the prompt, but may use a different symbol.
-In the examples for this lesson, we'll show the prompt as `$ `.
-Most importantly:
-when typing commands, either from these lessons or from other sources,
-*do not type the prompt*, only the commands that follow it.
+The shell typically uses `$ ` as the prompt, but may use a different symbol. 
+In the examples for this lesson, we'll show the prompt as `$ `.  Most
+importantly: when typing commands, either from these lessons or from other
+sources, *do not type the prompt*, only the commands that follow it.
 
-So let's try our first command, which will list the contents of the current directory:
+So let's try our first command, which will list the contents of the current
+directory:
 
 ~~~
 $ ls
