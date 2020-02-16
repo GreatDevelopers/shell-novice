@@ -26,7 +26,6 @@ using these resources effectively.
 > ## Prerequisites
 >
 > This lesson guides you through the basics of file systems and the shell. 
-
 > If you have stored files on a computer at all and recognise the word
 > “file” and either “directory” or “folder” (two common words for the same
 > thing), you're ready for this lesson.
